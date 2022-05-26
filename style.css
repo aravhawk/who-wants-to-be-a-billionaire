@@ -1,0 +1,53 @@
+.logout_btn,
+.sign_in_btn{
+    float: right;
+    margin: 5px;
+}
+
+.start_btn{
+    font-size: 50px !important;
+}
+
+body{
+    background-size: cover;
+}
+
+.reward-heading{
+    font-weight: bold;
+    background-color: gold;
+    width: fit-content;
+    padding: 10px;
+}
+
+.question-heading{
+    background-color: blueviolet;
+    width: fit-content;
+    padding: 10px;
+    font-weight: 500;
+    font-style: italic;
+    color: black;
+}
+
+.answer_btn{
+    font-weight: 600 !important;
+    color: black !important;
+    font-size: 15px !important;
+}
+
+#lost-message{
+    font-size: 32px;
+}
+
+#verify-message{
+    color: black;
+    font-weight: bold;
+}
+
+#forgot-pswd{
+    color: gray;
+    font-size: 13px;
+}
+
+#forgot-pswd :hover{
+    text-decoration: underline;
+}

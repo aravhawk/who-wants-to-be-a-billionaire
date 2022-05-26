@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login | Who Wants To Be A Billionaire</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <script src="https://www.gstatic.com/firebasejs/8.6.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-auth.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- The surrounding HTML is left untouched by FirebaseUI.
+         Your app may use that space for branding, controls and other customizations.-->
+         <h1 style="text-align: center;">Login To Start Playing</h1>
+         <br><br>
+         <center>
+      <form id="signup-form">
+        <div class="input-field">
+          <input placeholder="Email Address" type="email" id="signup-email" required />
+        </div>
+        <div class="input-field">
+          <input placeholder="Password" type="password" id="signup-password" required />
+        </div>
+        <button class="btn btn-warning">Sign up</button><br>
+        <label class="signup-error"> </label>
+      </form>
+      <label id="verify-message"></label>
+    </div>
+    </center>
+
+    <br><br>
+         <center>
+      <form id="login-form">
+        <div class="input-field">
+          <input placeholder="Email Address" type="email" id="login-email" required />
+        </div>
+        <div class="input-field">
+          <input placeholder="Password" type="password" id="login-password" required />
+        </div>
+        <button class="btn btn-warning">Sign in</button><br>
+        <label class="login-error"> </label>
+      </form>
+      <a href="forgot-pswd.html"><label id="forgot-pswd">Forgot Password?</label></a>
+    </div>
+    </center>
+
+    <script>
+        var config = {
+          apiKey: "AIzaSyANEvV2iSFsAGl5gCiv6338w2EnZmxRj80",
+          authDomain: "who-wants-to-be-a-billionaire.firebaseapp.com",
+          databaseURL: "https://console.firebase.google.com/u/0/project/who-wants-to-be-a-billionaire/firestore/data/",
+          projectId: "who-wants-to-be-a-billionaire",
+          storageBucket: "who-wants-to-be-a-billionaire.appspot.com",
+          messagingSenderId: "63964723780",
+          appId: "1:63964723780:web:5daf18ad22674a69a3da11",
+          measurementId: "G-QCT05GGDD7"
+  };
+
+        firebase.initializeApp(config);
+
+// make auth references
+const auth = firebase.auth();
+const db = firebase.firestore();
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="login.js"></script>
+</body>
+</html>

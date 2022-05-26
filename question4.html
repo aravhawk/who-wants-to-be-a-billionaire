@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Who Wants To Be A Billionaire</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <script src="https://www.gstatic.com/firebasejs/8.6.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-firestore.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body background="logo.png">
+    <a href="#" class="grey-text" id="logout"><button class="btn btn-danger logout_btn" onclick="signOut()">Forfeit</button></a>
+    <br><br><br><br><br><br><br>
+    <center>
+        <h2 class="reward-heading">For $500,000</h2>
+        <h3 class="question-heading">Which of these brands was chiefly associated with the manufacture of household locks?</h3>
+        <br><br>
+        <button class="btn btn-info answer_btn" onclick="getQuestion4Wrong();">[A]  Phillips</button><br><br>
+        <button class="btn btn-info answer_btn" onclick="getQuestion4Wrong();">[B]  Flymo</button><br><br>
+        <button class="btn btn-info answer_btn" onclick="addQuestion4Money();">[C]  Chubb</button><br><br>
+        <button class="btn btn-info answer_btn" onclick="getQuestion4Wrong();">[D]  Ronseal</button><br><br>
+    </center>
+    <script>
+        var config = {
+          apiKey: "AIzaSyANEvV2iSFsAGl5gCiv6338w2EnZmxRj80",
+          authDomain: "who-wants-to-be-a-billionaire.firebaseapp.com",
+          databaseURL: "https://console.firebase.google.com/u/0/project/who-wants-to-be-a-billionaire/firestore/data/",
+          projectId: "who-wants-to-be-a-billionaire",
+          storageBucket: "who-wants-to-be-a-billionaire.appspot.com",
+          messagingSenderId: "63964723780",
+          appId: "1:63964723780:web:5daf18ad22674a69a3da11",
+          measurementId: "G-QCT05GGDD7"
+  };
+
+        firebase.initializeApp(config);
+
+// make auth and db references
+const auth = firebase.auth();
+const db = firebase.firestore();
+    </script>
+    <script src="login.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
